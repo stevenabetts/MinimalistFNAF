@@ -537,9 +537,18 @@ class GameState: ObservableObject {
         gameText = "X_X"
                 
         bonnie?.moveTimer?.invalidate()
+        
         chica?.moveTimer?.invalidate()
+        
         freddy?.moveTimer?.invalidate()
+        freddy?.delayedAttackTimer?.invalidate()
+        freddy?.outageMusicTimer?.invalidate()
+        freddy?.outageAttackTimer?.invalidate()
+        freddy?.outageWalkingTimer?.invalidate()
+        
         foxy?.moveTimer?.invalidate()
+        foxy?.attackTimer?.invalidate()
+        foxy?.sprintTimer?.invalidate()
     }
     
     func resetGameState() {
